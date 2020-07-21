@@ -48,9 +48,6 @@ CREATE TABLE Salaries (
     salary INT   NOT NULL
 );
 
-ALTER TABLE Employees ADD CONSTRAINT fk_Employees__emp_title_id FOREIGN KEY(emp_title_id)
-REFERENCES Titles (title_id);
-
 ALTER TABLE DeptEmployee ADD CONSTRAINT fk_DeptEmployee__emp_no FOREIGN KEY(emp_no)
 REFERENCES Employees (emp_no);
 
@@ -66,3 +63,5 @@ REFERENCES Employees (emp_no);
 ALTER TABLE Salaries ADD CONSTRAINT fk_Salaries__emp_no FOREIGN KEY(emp_no)
 REFERENCES Employees (emp_no);
 
+ALTER TABLE Employees ADD CONSTRAINT fk_Employees__emp_title_id FOREIGN KEY(emp_title_id)
+REFERENCES Titles (title_id);
